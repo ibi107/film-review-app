@@ -11,6 +11,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Represents a Movie entity stored in the "movies" collection in MongoDB.
+ */
 @Document(collection = "movies")
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,6 +30,9 @@ public class Movie {
     private List<String> genres;
     private List<String> backdrops;
 
+    /**
+     * List of reviews associated with the movie (defined in Review.java).
+     */
     @DocumentReference
     private List<Review> reviewIds;
 
