@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './components/HomePage';
+import HomePage from './components/HomePage';
+import MovieReviewPage from './components/MovieReviewPage';
 
 function App() {
 
@@ -9,7 +10,8 @@ function App() {
     <Router>
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/movie/:imdbId" element={<MovieReviewPage />}/>
       </Routes>
     </div>
     </Router>
